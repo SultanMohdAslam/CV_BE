@@ -17,10 +17,15 @@ Spring Boot microservice backend for Sultan Md Aslam's Dynamic CV & Portfolio, c
 ## 🚀 Getting Started
 
 ### Database Configuration
-The application connects to Neon PostgreSQL using SSL:
-- **JDBC URL**: `jdbc:postgresql://ep-still-brook-b5v5x46k-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require`
-- **Username**: `neondb_owner`
-- Set in [application.yml](src/main/resources/application.yml)
+The application connects to Neon PostgreSQL using environment variables:
+- `SPRING_DATASOURCE_URL`: PostgreSQL JDBC connection URL (with SSL enabled)
+- `SPRING_DATASOURCE_USERNAME`: Database username
+- `SPRING_DATASOURCE_PASSWORD`: Database password
+
+Copy `.env.example` to `.env` and fill in your credentials for local development:
+```bash
+cp .env.example .env
+```
 
 ### Build & Run
 ```bash
