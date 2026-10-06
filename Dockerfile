@@ -31,6 +31,6 @@ USER spring:spring
 # Copy built application jar from builder stage
 COPY --from=builder /app/app.jar app.jar
 
-EXPOSE 8080
+EXPOSE 10000
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
